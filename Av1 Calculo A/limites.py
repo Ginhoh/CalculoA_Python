@@ -32,4 +32,21 @@ def limites_infinito():
 O limite de {f} quando x tende a -oo é: {limite_esquerda}''')
 
 
-print(limites_infinito())
+while True:
+    escolha = int(input('''Escolha uma opção: 
+          1. Calcular limite
+          2. Calcular limites infinitos
+          3. Calcular limites laterais
+          4. Calcular limites no infinito
+          5. Sair
+          '''))
+    if escolha == 1 or escolha == 2:
+        print(calcular_limites())
+    elif escolha == 3: 
+        print(limites_laterais())
+    elif escolha == 4:
+        print(limites_infinito())
+    elif escolha == 5:
+        break
+
+print('Programa encerrado.')
