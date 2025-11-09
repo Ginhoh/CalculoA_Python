@@ -22,5 +22,14 @@ def limites_laterais():
 O limite da de {f} quando x tende a {i} para a ESQUERDA é: {limite_esquerda}''')
 
     
+def limites_infinito():
+    x =sp.symbols('x')
+    f = input('Digite a função: ')
+    limite_direita = sp.limit(f,x,sp.oo) # Calculando o limite pelo infinito POSITIVO
+    limite_esquerda = sp.limit(f,x,-sp.oo) # Calculando o limite pelo infinito NEGATIVO
 
-print(limites_laterais())
+    return(f'''O limite de {f} quando x tende a +oo é: {limite_direita}
+O limite de {f} quando x tende a -oo é: {limite_esquerda}''')
+
+
+print(limites_infinito())
